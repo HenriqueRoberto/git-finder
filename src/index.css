@@ -1,0 +1,320 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #121212;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background-color: #000;
+    padding: 4rem;
+    width: 1156px;
+    height: 537px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Bolinhas no canto superior esquerdo */
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Bolinhas no canto superior esquerdo */
+
+.background::before {
+    content: "";
+    position: fixed;
+    top: 28px;
+    left: 71px;
+    width: 239px;
+    height: 225px;
+    background-image: url('./assets/img/dots.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+
+/* Radial gradient no canto superior direito */
+
+.background::after {
+    content: "";
+    position: fixed;
+    top: -20vh;
+    right: -10vw;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, #005CFF -10%, #00000000 60%);
+    z-index: 0;
+}
+
+
+/* radial azul por cima no canto inferior esquerdo */
+
+.extra-radial {
+    position: fixed;
+    bottom: -1vh;
+    left: -18vw;
+    width: 35vw;
+    height: 35vw;
+    background: radial-gradient(circle, #005CFF -25%, #00000000 59%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-logo {
+    width: 58px;
+    height: 58px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 100%;
+    margin-left: 15px;
+}
+
+
+/* SEARCH FORM */
+
+.search-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 12px 16px;
+    width: 503px;
+    height: 62px;
+    font-size: 20px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px 0 0 10px;
+}
+
+.search-button {
+    padding: 0 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* user */
+
+.user-card {
+    background-color: #D9D9D9;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 804px;
+    height: 257px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    object-fit: cover;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-name {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.user-bio {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+
+/* erro */
+
+.error-message {
+    background-color: #D9D9D9;
+    color: #FF0000;
+    font-size: 20px;
+    padding: 20px!important;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 30px;
+    width: 710px;
+    height: 88px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1920px) {
+    .main-container {
+        width: 84vw;
+        height: 76vh;
+        padding: 7rem 4rem;
+    }
+    .user-name {
+        font-size: 1.6rem;
+    }
+    .user-bio {
+        font-size: 1.4rem;
+    }
+    .user-avatar {
+        width: 18vw;
+        height: auto;
+    }
+    .user-card,
+    .error-message {
+        width: 80%;
+        margin-top: 6vh;
+    }
+    .user-card {
+        height: 35vh;
+    }
+    .error-message {
+        height: 15vh;
+        padding: 3rem!important;
+        font-size: 2rem;
+    }
+    .search-input {
+        height: 6vh;
+        width: 50%;
+        font-size: 24px;
+    }
+    .background::before {
+        width: 12vw;
+        height: 12vw;
+        top: 5vh;
+        left: 3vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .main-container {
+        width: 80%;
+        height: 450px;
+        padding: 3rem 2rem;
+    }
+    .search-input {
+        width: 50%;
+        height: 48px;
+        font-size: 18px;
+    }
+    .search-button {
+        font-size: 18px;
+        padding: 0 16px;
+    }
+    .user-card {
+        width: 80%;
+        height: 180px;
+        padding: 2rem;
+    }
+    .user-avatar {
+        width: 130px;
+        height: 130px;
+    }
+    .user-name {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .user-info {
+        font-size: 10px;
+    }
+    .error-message {
+        width: 80%;
+        height: auto;
+        padding: 1.5rem;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px !important;
+    }
+    .search-input {
+        width: 60%;
+        height: 40px;
+        font-size: 15px;
+    }
+    .user-avatar {
+        width: 110px;
+        height: 110px;
+    }
+    .user-card {
+        padding: 1rem;
+    }
+    .user-bio {
+        font-size: 11px;
+    }
+    .background::before {
+        left: 31px;
+        width: 143px;
+        height: 143px;
+    }
+    .extra-radial {
+        bottom: 5vh;
+        left: -25vw;
+        width: 293px;
+        height: 300px;
+    }
+}
