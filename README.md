@@ -16,4 +16,10 @@ Uma aplicação feita com **React + Vite** que permite buscar perfis públicos d
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - API pública do GitHub: `https://api.github.com/users/{username}`
 
+## ▶️ Como iniciar o projeto
 
+Abra o terminal **na pasta `src`** do projeto e execute:
+
+```bash
+npm install
+npm run dev
